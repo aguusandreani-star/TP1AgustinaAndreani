@@ -544,53 +544,36 @@ fieldset legend {
       margin-top: 20px;
       }
       /* FLECHA TOP*/
-/* ------------------------------------- */
-/* FLECHA TOP (Scroll to Top Button) - SOLO CSS */
-/* ------------------------------------- */
-
-/* ------------------------------------- */
-/* FLECHA TOP - CORRECCIÓN FINAL: Apunta DIRECTAMENTE ARRIBA */
-/* ------------------------------------- */
-
 #scroll-to-top {
-    /* Posicionamiento Fijo en la esquina inferior derecha */
     position: fixed;
-    bottom: 30px;    /* 30px desde abajo */
-    right: 30px;     /* 30px desde la derecha */
+    bottom: 30px;   
+    right: 30px;     
     z-index: 1000;
     cursor: pointer;
-    
-    /* TAMAÑO Y ESTILO DE LA FLECHA (Igual que .next) */
     width: 20px;
     height: 20px;
-    /* BORDES: Se crea un triángulo con el borde derecho y el inferior */
-    border: solid #2D6529; /* Color verde de tu marca */
+    border: solid #2D6529; 
     border-width: 0 4px 4px 0; 
     display: inline-block;
     padding: 3px;
-    
-    /* ROTACIÓN FINAL CORRECTA: -135 grados = apunta ARRIBA */
     transform: rotate(-135deg); 
-    
-    /* Animación de rebote hacia arriba */
     animation: bounce-up 2s infinite; 
-    
     background: transparent;
     text-decoration: none; 
 }
 
-/* Animación de rebote ajustada a la rotación de -135deg */
+
 @keyframes bounce-up {
     0%, 20%, 50%, 80%, 100% {
-        /* Estado normal: Arriba */
+        
         transform: translateY(0) rotate(-135deg);
     }
     40% {
-        /* En el 40%, sube 10px */
+        
         transform: translateY(-10px) rotate(-135deg); 
     }
     60% {
-        /* En el 60%, baja 5px */
+        
         transform: translateY(-5px) rotate(-135deg);  
     }
 }
@@ -604,7 +587,6 @@ fieldset legend {
 /* 1. MEDIA QUERY PARA TABLETAS (Hasta 1024px) */
 /* ========================================= */
 @media (max-width: 1024px) {
-    /* AJUSTE GENERAL: Reducir los grandes paddings de 200px */
     .nosotros, .filosofia, .parrafo {
         padding-left: 50px;
         padding-right: 50px;
@@ -624,26 +606,26 @@ fieldset legend {
 
     /* BARRA DE NAVEGACIÓN */
     #top ul {
-        gap: 15px; /* Reducir el espacio entre los links */
+        gap: 15px;
     }
 
     /* PORTADA */
     .portada h1 {
-        font-size: 70px; /* Reducir el tamaño de la fuente */
+        font-size: 70px; 
     }
     .imagenbase, .imagenhover {
-        height: 120px; /* Reducir el tamaño del ícono de play */
+        height: 120px; 
     }
 
     /* RECETAS */
     .card-container {
-        /* Permitir que las tarjetas se envuelvan en dos columnas */
+        
         flex-wrap: wrap; 
         justify-content: center;
         gap: 20px;
     }
     .recipe-card {
-        width: 45%; /* Mostrar 2 tarjetas por fila */
+        width: 45%;
         margin: 10px 0;
     }
 
@@ -659,12 +641,12 @@ fieldset legend {
 /* ========================================= */
 @media (max-width: 768px) {
 
-    /* BARRA DE NAVEGACIÓN: Apilar y centrar */
+    
     #top {
         padding: 10px;
     }
     #top ul {
-        flex-direction: column; /* Apilar los elementos del menú */
+        flex-direction: column; 
         align-items: center;
         padding: 0;
     }
@@ -675,7 +657,7 @@ fieldset legend {
         font-size: 16px;
     }
     
-    /* AJUSTE GENERAL: Ajustar todos los paddings al mínimo */
+    
     .nosotros, .filosofia, .parrafo, .certificaciones, .productos, footer {
         padding-left: 20px;
         padding-right: 20px;
@@ -687,20 +669,19 @@ fieldset legend {
     
     /* PORTADA */
     .portada {
-        background-position: center 30%; /* Ajustar la posición de la imagen de fondo */
+        background-position: center 30%; 
     }
     .portada h1 {
-        font-size: 45px; /* Gran reducción para que quepa */
+        font-size: 45px; 
         line-height: 1;
         padding-top: 150px;
     }
     .imagenbase, .imagenhover {
-        height: 80px; /* Reducir aún más el ícono de play */
+        height: 80px;
     }
 
     /* NOSOTROS */
     .parrafo {
-        /* Fuerza a que los dos <p> con margen negativo se apilen */
         display: block; 
         padding-top: 20px;
         margin: 0; 
@@ -709,51 +690,50 @@ fieldset legend {
         margin: 10px 0;
     }
     
-    /* CERTIFICACIONES: Apilar iconos */
+   
     .iconos {
-        flex-direction: column; /* Apilar iconos verticalmente */
+        flex-direction: column; 
         align-items: center;
         gap: 30px;
     }
 
-    /* RECETAS: Apilar tarjetas (una por fila) */
+    
     .recipe-card {
-        width: 100%; /* Ancho completo */
-        flex-direction: column; /* Asegurar que la imagen y el contenido se apilen */
+        width: 100%; 
+        flex-direction: column; 
         text-align: center;
     }
     .card-image {
         max-height: 250px;
     }
     .details {
-        flex-direction: row; /* Mantener tiempo y dificultad en línea si es posible */
+        flex-direction: row; 
         justify-content: center;
     }
 
-    /* GALERÍA: Apilar imágenes */
     .galeria {
-        flex-direction: column; /* Apilar todos los elementos de la galería */
-        gap: 10px; /* Reducir el espacio entre las filas de imágenes */
+        flex-direction: column; 
+        gap: 10px; 
     }
     .galeria article {
         display: flex; 
-        flex-direction: column; /* Apilar las 3 imágenes dentro de cada article */
+        flex-direction: column; 
         align-items: center;
         gap: 10px;
     }
     .galeria article a img {
-        width: 90vw; /* Usar el 90% del viewport width */
+        width: 90vw; 
         height: auto;
-        max-width: 300px; /* Limitar el tamaño máximo */
+        max-width: 300px; 
         margin-left: 0;
     }
 
     /* FORMULARIO */
     .contenedor {
-        width: 90%; /* Ancho casi completo para el formulario */
+        width: 90%;
         padding: 0 10px;
     }
-    /* Hacer que inputs y textarea usen todo el ancho disponible */
+   
     input:not([type="radio"]):not([type="checkbox"]), select, textarea {
         width: 90%; 
         margin: 10px auto;
@@ -761,19 +741,19 @@ fieldset legend {
 
     /* MAPA */
     #contacto iframe {
-        width: 90%; /* Ancho casi completo para el mapa */
-        margin: 0 auto; /* Centrar */
+        width: 90%; 
+        margin: 0 auto; 
         padding-top: 30px;
     }
     #contacto h3 {
-        text-align: center; /* Centrar el título */
+        text-align: center; 
         padding-left: 0;
         padding-right: 0;
     }
 
     /* FOOTER */
     footer {
-        padding-bottom: 70px; /* Espacio extra para que la flecha top no lo cubra */
+        padding-bottom: 70px; 
     }
     footer article {
         flex-direction: column;
